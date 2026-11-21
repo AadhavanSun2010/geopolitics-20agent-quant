@@ -75,7 +75,7 @@ LLM_PROVIDER = os.getenv("SIM_LLM_PROVIDER", "gemini").lower()   # gemini | groq
 PROVIDERS: Dict[str, Dict[str, Any]] = {
     "gemini": {   # Google AI Studio free tier (OpenAI-compatible endpoint)
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
-        "model": "gemini-2.5-flash", "key_env": "GEMINI_API_KEY", "rpm": 10,
+        "model": "gemini-3.5-flash-lite", "key_env": "GEMINI_API_KEY", "rpm": 10,
     },
     "groq": {     # Groq free tier
         "base_url": "https://api.groq.com/openai/v1",
