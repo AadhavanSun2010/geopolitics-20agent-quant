@@ -76,7 +76,6 @@ PROVIDERS: Dict[str, Dict[str, Any]] = {
     "gemini": {   # Google AI Studio free tier (OpenAI-compatible endpoint)
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
         "model": "gemini-2.5-flash", "key_env": "GEMINI_API_KEY", "rpm": 10,
-        "extra_body": {"reasoning_effort": "none"},
     },
     "groq": {     # Groq free tier
         "base_url": "https://api.groq.com/openai/v1",
