@@ -1,0 +1,116 @@
+{
+  "turn": 1,
+  "scenario_date": "Current",
+  "us_strategic_score": 50,
+  "defcon": 4,
+  "hawkes_escalation_intensity": 0.15,
+  "us_spy_stats": {
+    "agency_name": "CIA / NSA / JSOC",
+    "espionage_attack": 95,
+    "counter_intel_defense": 90,
+    "black_budget_billions": 50.0,
+    "kompromat_dossiers": {}
+  },
+  "us_domestic_politics": {
+    "approval_rating": 54.0,
+    "rally_effect_turns_active": 0,
+    "war_exhaustion_index": 5.0,
+    "wall_street_oligarch_loyalty": 75.0,
+    "pentagon_joint_chiefs_obedience": 85.0,
+    "deep_state_25th_amendment_risk": 10.0
+  },
+  "us_stockpiles_and_tech": {
+    "spr_oil_reserves_pct": 80.0,
+    "rare_earth_defense_stockpile_pct": 65.0,
+    "precision_munitions_magazine_pct": 90.0,
+    "us_military_tech_edge": 100.0
+  },
+  "us_metrics": {
+    "sp500": 5800.0,
+    "sp500_var_95": -3.2,
+    "sp500_cvar_95": -4.8,
+    "inflation_pct": 2.9,
+    "fed_funds_rate": 4.5,
+    "treasury_yield_2y": 4.1,
+    "treasury_yield_10y": 4.2,
+    "yield_curve_inverted": false,
+    "oil_price_bbl": 78.0,
+    "oil_futures_curve": "Normal_Contango",
+    "deficit_trillions": 1.8,
+    "supply_chain_stress_index": 15.0,
+    "shadow_fleet_leakage_pct": 0.0,
+    "hostile_short_interest_billions": 10.0
+  },
+  "undersea_cables_status": {
+    "TransAtlantic_SWIFT_Fiber": true,
+    "Luzon_Taiwan_Pacific_Fiber": true,
+    "Red_Sea_Eurasia_Fiber": true
+  },
+  "trade_corridors_status": {
+    "Taiwan_Strait_Advanced_Chips": 1.0,
+    "South_Korea_Japan_Memory_Tech": 1.0,
+    "China_Rare_Earths_Gallium": 0.7,
+    "Strait_of_Hormuz_Crude": 1.0,
+    "Bab_el_Mandeb_Red_Sea": 0.85,
+    "Malacca_Strait_Maritime": 1.0,
+    "Bosphorus_Black_Sea_Grain_Oil": 0.9,
+    "China_India_Pharma_APIs": 1.0,
+    "DRC_Africa_Cobalt_Copper": 1.0,
+    "Australia_Lithium_Iron": 1.0,
+    "EU_Germany_Industrial_Machinery": 1.0,
+    "Brazil_LatAm_Agri_Heavy_Crude": 1.0
+  },
+  "active_flashpoints": [
+    {
+      "id": "FP_01_TAIWAN_SCS",
+      "region": "Taiwan Strait / South China Sea",
+      "severity": 3,
+      "description": "A fictionalized regional maritime and technology-security crisis is increasing insurance costs and uncertainty around advanced-chip shipments.",
+      "gameplay_dimensions": [
+        "trade",
+        "deterrence",
+        "diplomacy",
+        "semiconductor_supply"
+      ],
+      "escalation_probability": 0.15
+    },
+    {
+      "id": "FP_02_MIDDLE_EAST_ENERGY",
+      "region": "Middle East energy corridors",
+      "severity": 2,
+      "description": "Elevated political and maritime risk around key energy transit routes is adding a risk premium to crude markets.",
+      "gameplay_dimensions": [
+        "energy_prices",
+        "shipping",
+        "alliance_management"
+      ],
+      "escalation_probability": 0.12
+    },
+    {
+      "id": "FP_03_RARE_EARTH_CONTROLS",
+      "region": "East Asia critical minerals",
+      "severity": 2,
+      "description": "Export licensing and possible restrictions on selected critical minerals are testing industrial supply-chain resilience.",
+      "gameplay_dimensions": [
+        "critical_minerals",
+        "manufacturing",
+        "trade_policy"
+      ],
+      "escalation_probability": 0.18
+    },
+    {
+      "id": "FP_04_BRICS_DEDOLLARIZATION",
+      "region": "Global financial system",
+      "severity": 2,
+      "description": "Several emerging economies are discussing additional local-currency settlement channels, creating uncertainty but not an immediate replacement for the dollar system.",
+      "gameplay_dimensions": [
+        "fx_reserves",
+        "bond_markets",
+        "sanctions_policy",
+        "diplomacy"
+      ],
+      "escalation_probability": 0.1
+    }
+  ],
+  "public_history": []
+}
