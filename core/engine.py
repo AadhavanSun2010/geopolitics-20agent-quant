@@ -204,7 +204,7 @@ def _retry_after(exc: Exception) -> Optional[float]:
 
 
 async def llm_chat(system: str, user: str, *, json_mode: bool = True, temperature: float = 0.7,
-                   max_tokens: int = 900) -> str:
+                   max_tokens: int = 4096) -> str:
     """One chat completion, behind Semaphore(5) + RPM limiter, with retry/backoff."""
     global _FATAL
     ok, reason = llm_ready()
@@ -256,6 +256,7 @@ async def llm_chat(system: str, user: str, *, json_mode: bool = True, temperatur
                     raise LLMUnavailable(_FATAL[0]) from exc
         if delay > 0 and attempt < MAX_RETRIES:
             await asyncio.sleep(delay)
+    print(f"[LLM ERROR] {last_err}", flush=True)
     raise LLMError(f"LLM call failed after {MAX_RETRIES} attempts: {last_err}")
 
 
@@ -273,9 +274,8 @@ def extract_json(text: str) -> Dict[str, Any]:
         raise ValueError("JSON reply is not an object")
     return data
 
-
 async def llm_structured(system: str, user: str, model_cls: type, *, temperature: float = 0.6,
-                         max_tokens: int = 900) -> Any:
+                         max_tokens: int = 4096) -> Any:
     last: Optional[Exception] = None
     for attempt in range(3):
         sys_msg = system if attempt == 0 else system + "\nReturn ONLY one valid JSON object. No prose, no markdown."
